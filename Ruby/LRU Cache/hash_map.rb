@@ -28,6 +28,9 @@ class HashMap
     bucket(key).get(key)
   end
 
+  alias_method :[], :get
+  alias_method :[]=, :set
+
   def remove(key)
     if include?(key)
       bucket(key).remove(key)

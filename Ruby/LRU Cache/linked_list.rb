@@ -23,6 +23,8 @@ class LinkedList
     @tail.prev.next = node
     @tail.prev, @node.prev = node, @tail.prev
     node.next = @tail
+
+    node
   end
 
   def remove(key)
